@@ -1,0 +1,106 @@
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+    "email": "huycung@gmail.com",
+    "password": "123"
+}
+################################
+POST http://localhost:5000/api/auth/register
+Content-Type: application/json
+
+{
+    "email": "admin",
+    "password": "123",
+    "repassword": "123"
+}
+
+################################
+GET http://localhost:5000/api/allcode?type=STATUS
+
+################################
+GET http://localhost:5000/api/get-all-users/All
+
+################################################################
+POST http://localhost:5000/api/create-new-user
+Content-Type: application/json
+
+{
+    "email": "santaryot",
+    "password": "123",
+    "firstName": "lehuydat@gmail.com",
+    "lastName": "lehuydat@gmail.com",
+    "address": "lehuydat@gmail.com",
+    "phoneNumber": "lehuydat@gmail.com",
+    "gender": "lehuydat@gmail.com",
+    "roleId": "lehuydat@gmail.com"
+}
+
+################################################################
+DELETE http://localhost:5000/api/delete-user?id=6
+
+################################################################
+PUT http://localhost:5000/api/update-user
+Content-Type: application/json
+
+{
+    "email": "santaryot",
+    "password": "123",
+    "firstName": "santa",
+    "lastName": "lehuydat@gmail.com",
+    "address": "lehuydat@gmail.com",
+    "phoneNumber": "lehuydat@gmail.com",
+    "gender": "lehuydat@gmail.com",
+    "roleId": "lehuydat@gmail.com"
+}
+
+################################################################\
+GET http://localhost:5000/api/top-doctor-home
+
+################################################################
+POST http://localhost:5000/api/create-new-user
+Content-Type: application/json
+
+{
+    "email": "santaryot",
+    "password": "123",
+    "firstName": "santa",
+    "lastName": "lehuydat@gmail.com",
+    "address": "lehuydat@gmail.com",
+    "phoneNumber": "lehuydat@gmail.com",
+    "genderId": "M",
+    "roleId": "R1",
+    "positionId": "R2"
+
+}
+
+################################################################
+POST http://localhost:5000/api/save-infor-doctor
+Content-Type: application/json
+
+{
+    "doctorId" : "3",
+    "contentMarkdown": "ok",
+    "contentHTML": "ok"
+}
+
+################################################################
+GET http://localhost:5000/api/get-detail-doctor-by-id?id=3
+
+################################################################
+POST http://localhost:5000/api/bulk-create-schedule
+Content-Type: application/json
+
+{
+    "arrSchedule": [ 
+        {"doctorId": 3, "date": "2023-03-13", "timeType": "T1"},
+        {"doctorId": 3, "date": "2023-03-13", "timeType": "T2"},
+        {"doctorId": 3, "date": "2023-03-13", "timeType": "T3"},
+        {"doctorId": 3, "date": "2023-03-13", "timeType": "T5"}
+    ],
+    "doctorId": 3,
+    "date": "2023-03-13"
+}
+
+################################
+GET http://localhost:5000/api/get-list-patient?doctorId=3&date=2023-03-25
